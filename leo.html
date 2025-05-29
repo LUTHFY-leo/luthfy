@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Relaxation Landing</title>
+<style>
+  /* Reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html, body {
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+  }
+
+  body {
+    /* Background image from Unsplash Athens river-like */
+    background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1471&q=80') no-repeat center center/cover;
+    display: flex;
+    height: 100vh;
+  }
+
+  /* Left vertical nav */
+  nav {
+    width: 15%;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 20px;
+  }
+
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 15px 0;
+    letter-spacing: 1.2px;
+    transition: color 0.3s ease;
+  }
+
+  nav a:hover {
+    color: #FFD700; /* golden highlight */
+  }
+
+  /* Right side content area */
+  .content {
+    flex: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 5% 0 3%;
+  }
+
+  .main-text {
+    font-size: 3.5rem;
+    font-weight: 700;
+    max-width: 400px;
+    text-shadow: 3px 3px 8px rgba(0,0,0,0.7);
+    margin-bottom: 25px;
+    align-self: flex-end;
+  }
+
+  .join-button {
+    align-self: flex-end;
+    background-color: #FFD700;
+    color: #222;
+    border: none;
+    font-size: 1.3rem;
+    font-weight: 700;
+    padding: 15px 35px;
+    cursor: pointer;
+    border-radius: 35px;
+    box-shadow: 0 4px 8px rgba(255,215,0,0.5);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-transform: uppercase;
+  }
+
+  .join-button:hover {
+    background-color: #ffea1a;
+    transform: scale(1.05);
+  }
+
+  /* Bottom right discount text */
+  .discount {
+    position: absolute;
+    bottom: 40px;
+    right: 5%;
+    background: rgba(255, 215, 0, 0.85);
+    color: #222;
+    padding: 10px 25px;
+    font-weight: 700;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 8px rgba(255,215,0,0.7);
+    text-transform: uppercase;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    nav {
+      width: 25%;
+      padding-left: 15px;
+    }
+    .main-text {
+      font-size: 2.5rem;
+      max-width: 300px;
+    }
+    .join-button {
+      padding: 12px 25px;
+      font-size: 1.1rem;
+    }
+    .discount {
+      font-size: 1rem;
+      padding: 8px 16px;
+      bottom: 20px;
+      right: 3%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    body {
+      flex-direction: column;
+    }
+    nav {
+      width: 100%;
+      height: auto;
+      flex-direction: row;
+      justify-content: space-around;
+      padding: 15px 0;
+      background: rgba(0,0,0,0.7);
+    }
+    nav a {
+      font-size: 1rem;
+      padding: 10px;
+    }
+    .content {
+      padding: 30px 20px;
+      flex: none;
+      position: relative;
+      align-items: center;
+      text-align: center;
+    }
+    .main-text {
+      font-size: 2rem;
+      max-width: 100%;
+      margin-bottom: 15px;
+      align-self: center;
+    }
+    .join-button {
+      align-self: center;
+    }
+    .discount {
+      position: static;
+      margin-top: 25px;
+      box-shadow: none;
+      color: #ffd700;
+      background: transparent;
+    }
+  }
+</style>
+</head>
+<body>
+  <nav>
+    <a href="#home" tabindex="1">Home</a>
+    <a href="#service" tabindex="2">Service</a>
+    <a href="#aboutus" tabindex="3">About Us</a>
+    <a href="#contact" tabindex="4">Contact</a>
+  </nav>
+  <div class="content">
+    <div class="main-text">GET IN RELAX TODAY</div>
+    <button class="join-button" tabindex="5">JOIN NOW</button>
+    <div class="discount">25% DISCOUNT ON FIRST MONTH</div>
+  </div>
+</body>
+</html>
+
